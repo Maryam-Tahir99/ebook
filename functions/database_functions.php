@@ -1,6 +1,6 @@
 <?php
 	function db_connect(){
-		$conn = mysqli_connect("us-cdbr-east-02.cleardb.com", "b34e0c21df8f4c", "6f757c3b", "heroku_900385791635918");
+		$conn = mysqli_connect("b4iusavqtcp6yyxxw5vq-mysql.services.clever-cloud.com", "uhf0favw8nk12ttz", "H364o9KGBhDcTwnJrPyq", "b4iusavqtcp6yyxxw5vq");
 		if(!$conn){
 			echo "Can't connect database " . mysqli_connect_error($conn);
 			exit;
