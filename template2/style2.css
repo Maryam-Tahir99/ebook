@@ -1,0 +1,19 @@
+ .img-responsive .img-thumbnail {
+     float: left;
+     width: 200px;
+     height: 250px;
+     background-size: cover;
+     padding: 3px;
+     text-align: center;
+ }
+
+ .book-style {
+     height: 2.8em;
+     overflow: hidden;
+     line-height: 1.3em;
+     font-weight: bold;
+     padding: 3px 0px;
+     display: block;
+
+
+ }
