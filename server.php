@@ -8,7 +8,7 @@
 	$_SESSION['success'] = "";
 
 	// connect to database
-	$db = mysqli_connect('localhost', 'root', '', 'www');
+	$db = mysqli_connect('b4iusavqtcp6yyxxw5vq-mysql.services.clever-cloud.com', 'uhf0favw8nk12ttz', 'H364o9KGBhDcTwnJrPyq', 'b4iusavqtcp6yyxxw5vq');
 
 	// REGISTER USER
 	if (isset($_POST['reg_user'])) {
