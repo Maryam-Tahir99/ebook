@@ -46,7 +46,7 @@ if (isset($_POST['search'])) {
   //Search box value assigning to $Name variable.
      $Name = $_POST['search'];
   //Search query.   book_isbn, book_image, books_link FROM books
-     $Query = "SELECT book_isbn, book_image, books_link FROM books WHERE book_title LIKE '%$Name%' AND category='health'";
+     $Query = "SELECT book_isbn, book_image, books_link FROM books WHERE book_title LIKE '%$Name%' AND category='romance'";
   //Query execution
      $ExecQuery = MySQLi_query($con, $Query);
   //Creating unordered list to display result.
@@ -90,8 +90,8 @@ if (isset($_POST['search'])) {
             </a>
             <a href="./BOOKS/<?php echo $query_row['books_link']; ?>">
                 
-                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_blank" class="btn btn-primary btn-resp">Read</a>
-                <a href="./BOOKS/<?php echo $result['books_link']; ?>" class="btn btn-primary btn-down" download target="_self">Download </a>
+                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_self" class="btn btn-primary btn-resp">Read</a>
+                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" class="btn btn-primary btn-down" download target="_self">Download </a>
             </a>
 
         </div>
