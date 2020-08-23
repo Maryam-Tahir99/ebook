@@ -1,34 +1,22 @@
 <?php 
-  
-$filename = $_GET["file"]  . ".pdf"; 
-  
-function forceDownLoad($filename)
-
-{
-
-
-
-    header("Pragma: public");
-
-    header("Expires: 0"); // set expiration time
-
-    header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-	
-	header("Content-Type: application/text/x-vCard");
+  function db_connect(){
+		$conn = mysqli_connect("b4iusavqtcp6yyxxw5vq-mysql.services.clever-cloud.com", "uhf0favw8nk12ttz", "H364o9KGBhDcTwnJrPyq", "b4iusavqtcp6yyxxw5vq");
+		if(!$conn){
+			echo "Can't connect database " . mysqli_connect_error($conn);
+			exit;
+		}
+		return $conn;
+	}
 
 
-
-    header("Content-Disposition: attachment; filename=".basename($filename).";");
-
-    header("Content-Transfer-Encoding: binary");
-
-    header("Content-Length: ".filesize($filename));
-
-
-
-    @readfile($filename);
-
-    exit(0);
-
-} 
+<?php
+$file=$_GET['file'].".pdf";
+ header("Content-Disposition: attachment; filename=" . urlencode($file));   /*attachment for downloading file  */
+$fo=fopen($file,"r");
+while(!feof($fo)){
+    echo fread($fo,8000);
+    flush();
+}
+fclose($fo);
+?>
 ?> 
