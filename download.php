@@ -8,7 +8,7 @@ $file = $_GET["file"] .".pdf";
 header('Content-Type: application/pdf'); 
   
 // It will be called downloaded.pdf 
-header('Content-Disposition: attachment; filename="gfgpdf.pdf"'); 
+header('Content-Disposition: attachment; filename=\"$file\""); 
   
 $imagpdf = file_put_contents($image, file_get_contents($file));  
   
