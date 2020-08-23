@@ -26,7 +26,7 @@ if (isset($_POST['search'])) {
             <a href="<?php echo $Result['books_link']; ?>">
               <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $Result['book_image']; ?>">
               <a href="<?php echo $Result['books_link']; ?>" target="_self" class="btn btn-primary btn-resp">Read</a>  
-              <a href="./BOOKS/<?php echo $Result['books_link']; ?>" class="btn btn-primary btn-down" download >Download </a>
+              <a href="./BOOKS/<?php echo $Result['books_link']; ?>" download class="btn btn-primary btn-down" target="_self" >Download </a>
 
            
           </div>
