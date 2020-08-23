@@ -96,8 +96,8 @@ if (isset($_POST['search'])) {
                 
                 <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_blank" class="btn btn-primary btn-resp">Read</a>
                 <a href="<?php echo $Result['books_link']; ?>" download>
-            <a class="btn btn-primary btn-down">Download </a>
-            </a>
+                  <a class="btn btn-primary btn-down">Download </a>
+               </a>
             </a>
 
         </div>
