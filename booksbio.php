@@ -9,16 +9,7 @@
             <li><a href="booksrom.php">Romance</a></li>
         </ul> <br />
     </div>
-    <div class="row">
-        <!-- Search box. -->
-        <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 form-search">
-            <input class="form-control" type="text" id="search" placeholder="Search" />
-            <i class="fa fa-search"></i>
-        </form>
-        <br>
-        <!-- Suggestions will be displayed in below div -->
-        <div id="display"></div>
-    </div>
+    <
 </div>
 
 
