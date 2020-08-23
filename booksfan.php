@@ -79,7 +79,8 @@ if (isset($_POST['search'])) {
   ?>
 
 <p class="lead text-center text-muted">All Fantasy Books</p>
-<?php for($i = 0; $i < mysqli_num_rows($result); $i++) 
+
+    <?php for($i = 0; $i < mysqli_num_rows($result); $i++) 
     { ?>
     <div class="row">
         <?php 
@@ -91,7 +92,7 @@ if (isset($_POST['search'])) {
             </a>
             <a href="./BOOKS/<?php echo $query_row['books_link']; ?>">
                 
-                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_blank" class="btn btn-primary btn-resp">Read</a>
+                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_self" class="btn btn-primary btn-resp">Read</a>
                 <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" class="btn btn-primary btn-down" download target="_self">Download </a>
             </a>
 
