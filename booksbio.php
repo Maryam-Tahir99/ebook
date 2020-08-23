@@ -77,7 +77,7 @@ if (isset($_POST['search'])) {
      }
     
   ?>
-    <p class="lead text-center text-muted">Full Catalogs of Books</p>
+    <p class="lead text-center text-muted">Biography Books</p>
     <?php for($i = 0; $i < mysqli_num_rows($result); $i++) 
     { ?>
     <div class="row">
