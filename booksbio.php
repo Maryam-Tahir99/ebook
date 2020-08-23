@@ -40,43 +40,7 @@
   require_once "./template2/header.php";
   
 ?>
-<?php
-//Getting value of "search" variable from "script.js".
-if (isset($_POST['search'])) {
-  //Search box value assigning to $Name variable.
-     $Name = $_POST['search'];
-  //Search query.   book_isbn, book_image, books_link FROM books
-     $Query = "SELECT book_isbn, book_image, books_link FROM books WHERE category='biography' AND  book_title LIKE '%$Name%' ";
-  //Query execution
-     $ExecQuery = MySQLi_query($conn, $Query);
-  //Creating unordered list to display result.
-    
-     //Fetching result from database.
-     while ($Result = MySQLi_fetch_array($ExecQuery)) {
-         ?>
-<div class="row">
 
-    <div class="col-md-3">
-        <a href="<?php echo $Result['books_link']; ?>">
-            <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $Result['book_image']; ?>">
-            <a href="<?php echo $Result['books_link']; ?>" target="_blank" class="btn btn-primary btn-read">Read</a>
-            <a href="./BOOKS/<?php echo $Result['books_link']; ?>" class="btn btn-primary btn-down" download target="_self">Download </a>
-
-
-        </a>
-        <?php
-            $count++;
-            if($count >= 4){
-                $count = 0;
-                break;
-              }
-            } ?>
-    </div>>
-    <?php
-        
-     }
-    
-  ?>
     <p class="lead text-center text-muted">Biography Books</p>
     <?php for($i = 0; $i < mysqli_num_rows($result); $i++) 
     { ?>
