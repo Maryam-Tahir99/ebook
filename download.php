@@ -1,6 +1,6 @@
 
 <?php
-$file=$_GET['file'].".pdf";
+$file=$_GET['file'];
  header("Content-Disposition: attachment; filename=" . urlencode($file));   /*attachment for downloading file  */
 $fo=fopen($file,"r");
 while(!feof($fo)){
