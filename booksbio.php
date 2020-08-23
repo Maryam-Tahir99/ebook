@@ -2,9 +2,9 @@
     <div class="row">
         <h2>Books <b>By Genre</b></h2>
         <ul class="list-inline">
-            <li><a href="books.php" style="color: purple">All Books</a></li>
+            <li><a href="books.php" >All Books</a></li>
             <li><a href="bookshealth.php">Health</a></li>
-            <li><a href="booksbio.php">Biographies</a></li>
+            <li><a href="booksbio.php" style="color: purple">Biographies</a></li>
             <li><a href="booksfan.php">Fantasy</a></li>
             <li><a href="booksrom.php">Romance</a></li>
         </ul> <br />
