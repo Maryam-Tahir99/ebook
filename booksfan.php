@@ -33,7 +33,7 @@
 ?>
 
     
-<p class="lead text-center text-muted">All Fantasy Books</p>
+<p class="lead text-center text-muted">Fantasy Books</p>
 
     <?php for($i = 0; $i < mysqli_num_rows($result); $i++) 
     { ?>
