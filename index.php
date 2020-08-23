@@ -7,7 +7,7 @@ require "./template/header.php";  ?>
                 <div class="col-md-6 intro-heading">
                     <h1 class="brand-heading">Welcome</h1>
                     <p class="intro-text">Explore the world, and find out what you don't know by reading.</p>
-                    <button formaction="registration.php">Sign Up</button>
+                    <button formaction="register.php">Sign Up</button>
                 </div>
                 <div class="col-md-6 intro-image">
                     <img src="images/banner.png" alt="">
