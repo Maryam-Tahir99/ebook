@@ -29,7 +29,7 @@
   require_once "./template2/header.php";
   
 ?>
-<p class="lead text-center text-muted">All Romance Books</p>
+<p class="lead text-center text-muted">Romance Books</p>
 <?php for($i = 0; $i < mysqli_num_rows($result); $i++) 
     { ?>
     <div class="row">
