@@ -1,13 +1,12 @@
 
-<?php if (isset($_GET['file'])) {
-$file = $_GET['file'];
-if (file_exists($file) && is_readable($file) && preg_match('/\.pdf$/',$file)) {
- header('Content-Type: application/pdf');
- header("Content-Disposition: attachment; filename=\"$file\"");
- readfile($file);
+<?php
+$file=$_GET['file'].".pdf";
+ header("Content-Disposition: attachment; filename=" . urlencode($file));   /*attachment for downloading file  */
+
+$fo=fopen($file,"r");
+while(!feof($fo)){
+    echo fread($fo,8000);
+    flush();
 }
-} else {
- header("HTTP/1.0 404 Not Found");
- echo "<h1>Error 404: File Not Found: <br /><em>$file</em></h1>";
-}
+fclose($fo);
 ?>
