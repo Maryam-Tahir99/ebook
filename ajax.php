@@ -1,7 +1,7 @@
 <?php
 //Including Database configuration file.
 //Database connection.
-$con = MySQLi_connect("localhost", "root", "", "www_project");
+$con = MySQLi_connect("b4iusavqtcp6yyxxw5vq-mysql.services.clever-cloud.com", "uhf0favw8nk12ttz", "H364o9KGBhDcTwnJrPyq", "b4iusavqtcp6yyxxw5vq");
 //Check connection
 if (MySQLi_connect_errno()) {
    echo "Failed to connect to MySQL: " . MySQLi_connect_error();
