@@ -40,7 +40,6 @@
   require_once "./template2/header.php";
   
 ?>
-
 <?php
 //Getting value of "search" variable from "script.js".
 if (isset($_POST['search'])) {
@@ -58,13 +57,10 @@ if (isset($_POST['search'])) {
 <div class="row">
 
     <div class="col-md-3">
-    
         <a href="<?php echo $Result['books_link']; ?>">
             <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $Result['book_image']; ?>">
             <a href="<?php echo $Result['books_link']; ?>" target="_self" class="btn btn-primary btn-read">Read</a>
-            <a href="./BOOKS/<?php echo $Result['books_link']; ?>" download>
-            <a src="/BOOKS/<?php echo $Result['books_link']; ?>" class="btn btn-primary btn-down">Download </a>
-            </a>
+            <a href="download.php?file=<?php echo $Result['books_link']; ?>" class="btn btn-primary btn-down">Download </a>
 
 
         </a>
@@ -75,7 +71,7 @@ if (isset($_POST['search'])) {
                 break;
               }
             } ?>
-    </div>
+    </div>>
     <?php
         
      }
@@ -94,10 +90,8 @@ if (isset($_POST['search'])) {
             </a>
             <a href="./BOOKS/<?php echo $query_row['books_link']; ?>">
                 
-                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_blank" class="btn btn-primary btn-resp">Read</a>
-                <a href="./BOOKS/<?php echo $Result['books_link']; ?>" download>
-                  <a src="/BOOKS/<?php echo $Result['books_link']; ?>" class="btn btn-primary btn-down">/BOOKS/<?php echo $Result['books_link']; ?></a>
-               </a>
+                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_self" class="btn btn-primary btn-resp">Read</a>
+                <a href="download.php?file=<?php echo $query_row['books_link']; ?>" class="btn btn-primary btn-down">Download </a>
             </a>
 
         </div>
