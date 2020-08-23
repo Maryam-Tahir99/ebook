@@ -1,16 +1,21 @@
-
-
 <?php 
   
-$file = $_GET["file"] .".pdf"; 
+header("Content-Type: application/octet-stream"); 
   
-// We will be outputting a PDF 
-header('Content-Type: application/pdf'); 
+$file = $_GET["file"]  . ".pdf"; 
   
-// It will be called downloaded.pdf 
-header('Content-Disposition: attachment; filename=\"$file\""); 
+header("Content-Disposition: attachment; filename=" . urlencode($file));    
+header("Content-Type: application/download"); 
+header("Content-Description: File Transfer");             
+header("Content-Length: " . filesize($file)); 
   
-$imagpdf = file_put_contents($image, file_get_contents($file));  
+flush(); // This doesn't really matter. 
   
-echo $imagepdf; 
-?>
+$fp = fopen($file, "r"); 
+while (!feof($fp)) { 
+    echo fread($fp, 65536); 
+    flush(); // This is essential for large downloads 
+}  
+  
+fclose($fp);  
+?> 
