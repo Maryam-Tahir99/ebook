@@ -29,7 +29,7 @@
   $conn = db_connect();
 
   
-  $query="SELECT book_isbn, book_image, books_link FROM books where category='romance'";
+  $query="SELECT book_isbn, book_image, books_link FROM books where category='Romance'";
  
   $result = mysqli_query($conn, $query);
   if(!$result){
@@ -46,7 +46,7 @@ if (isset($_POST['search'])) {
   //Search box value assigning to $Name variable.
      $Name = $_POST['search'];
   //Search query.   book_isbn, book_image, books_link FROM books
-     $Query = "SELECT book_isbn, book_image, books_link FROM books WHERE book_title LIKE '%$Name%' AND category='romance'";
+     $Query = "SELECT book_isbn, book_image, books_link FROM books WHERE book_title LIKE '%$Name%' AND category='Romance'";
   //Query execution
      $ExecQuery = MySQLi_query($con, $Query);
   //Creating unordered list to display result.
