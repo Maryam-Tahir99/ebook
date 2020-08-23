@@ -86,7 +86,7 @@ $query1 = "SELECT book_isbn, book_image, books_link FROM books";
                         <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_blank" class="btn btn-primary btn-resp-read">Read</a>
                         </div>
                   <div class="col-sm-3">        
-                        <a href="download.php?file=<?php echo $query_row['books_link']; ?>" class="btn btn-primary">Download </a>
+                        <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" class="btn btn-primary btn-down" download target="_self">Download </a>
                     </a>
 
                 </div>
