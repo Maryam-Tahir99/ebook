@@ -46,7 +46,7 @@ if (isset($_POST['search'])) {
   //Search box value assigning to $Name variable.
      $Name = $_POST['search'];
   //Search query.   book_isbn, book_image, books_link FROM books
-     $Query = "SELECT book_isbn, book_image, books_link FROM books WHERE book_title LIKE '%$Name%' AND category='biography' ";
+     $Query = "SELECT book_isbn, book_image, books_link FROM books WHERE category='biography' AND  book_title LIKE '%$Name%' ";
   //Query execution
      $ExecQuery = MySQLi_query($conn, $Query);
   //Creating unordered list to display result.
