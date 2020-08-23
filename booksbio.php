@@ -17,7 +17,8 @@
         </form>
         <br>
         <!-- Suggestions will be displayed in below div -->
-        <div id="display"></div>
+        <div id="display">
+        </div>
     </div>
     </div>
    
@@ -91,7 +92,7 @@ if (isset($_POST['search'])) {
             </a>
             <a href="./BOOKS/<?php echo $query_row['books_link']; ?>">
                 
-                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_self" class="btn btn-primary btn-resp">Read</a>
+                <a href="./BOOKS/<?php echo $query_row['books_link']; ?>" target="_blank" class="btn btn-primary btn-resp">Read</a>
                 <a href="download.php?file=<?php echo $query_row['books_link']; ?>" class="btn btn-primary btn-down">Download </a>
             </a>
 
