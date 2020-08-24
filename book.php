@@ -15,7 +15,7 @@ $query1 = "SELECT book_isbn, book_image, books_link FROM books";
     echo "Can't retrieve data " . mysqli_error($conn);
     exit;
   }
-require_once "./template2/header.php";
+
 
   $row = mysqli_fetch_assoc($result);
   if(!$row){
