@@ -162,7 +162,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand text" href="#"><span class="logo text" style:"font-family: 'Sansita', sans-serif;">Ebook Reader</span></a>
+                <a class="navbar-brand text" href="books.php"><span class="logo" style:"font-family: 'Sansita', sans-serif;">Ebook Reader</span></a>
                 
             </div>
 
